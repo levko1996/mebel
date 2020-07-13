@@ -34,11 +34,9 @@
 		"gulp-uglify": "^3.0.2",
 		"jquery-form-styler": "^2.0.2",
 		"node-sass": "^4.14.1",
+		"magnific-popup": "^1.1.0",
+		"rateyo": "^3.0.0-alpha.2",
 		"normalize.css": "^8.0.1",
 		"slick-carousel": "^1.8.1"
-	},
-	"dependencies": {
-		"magnific-popup": "^1.1.0",
-		"rateyo": "^3.0.0-alpha.2"
 	}
 }
