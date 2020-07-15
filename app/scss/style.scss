@@ -594,6 +594,32 @@
 			}
 		}
 	}
+	&__loadMore{
+		font-size: 14px;
+		line-height: 1.715;
+		@include f600;
+		max-width: 1440px;
+		width: 100%;
+		padding: 15px 0px;
+		border: 1px solid $underline;
+		margin: 0px auto;
+		text-align: center;
+		align-items: center;
+		position: relative;
+		transition: all .3s;
+		cursor: pointer;
+		&:after{
+			content:'+';
+			padding: 0px 0px 0px 20px;
+			font-size: 24px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&:hover{
+			border: 1px solid $text;
+		}
+	}
 }
 
 .bottom-buy {
@@ -614,6 +640,11 @@
 		background-color: $peach; 
 	}
 }
+// количество карточек до нажатия кнопки loadMore
+#boxs .box:nth-child(n+5){
+	display: none;
+}
+
 
 @keyframes animate{
 	0%{
