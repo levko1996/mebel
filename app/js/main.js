@@ -43,4 +43,13 @@ $(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 	});
+
+	// new items load more
+	$("#newItemsLoadMore").click(function () {
+		$("#newBoxs .newBox:hidden").slice(0, 4).slideDown()
+		if (($("#newBoxs .newBox:hidden")).length == 0) {
+			$("#newItemsLoadMore").fadeOut('slow');
+		}
+	});
+
 })
