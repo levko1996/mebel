@@ -442,7 +442,8 @@
 // end slider
 
 // start sales-leaders
-.sales-leaders {
+.sales-leaders,
+.new-items {
 	padding: 100px 0px;
 
 	&__title {
@@ -472,11 +473,18 @@
 			opacity: 0;
 			transition: all .3s;
 		}
+		& .new-items__hidden {
+			opacity: 0;
+			transition: all .3s;
+		}
 
 		&:hover {
 			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 
 			& .sales-leaders__hidden {
+				opacity: 1;
+			}
+			& .new-items__hidden {
 				opacity: 1;
 			}
 		}
@@ -647,7 +655,8 @@
 }
 
 // количество карточек до нажатия кнопки loadMore
-#boxs .box:nth-child(n+5) {
+#boxs .box:nth-child(n+5),
+#newBoxs .newBox:nth-child(n+5) {
 	display: none;
 }
 
@@ -666,7 +675,6 @@
 
 // start collections
 .collections {
-	padding: 0px 0px 150px 0px;
 
 	&__mainTitle {
 		margin: 0px 0px 20px 0px;
