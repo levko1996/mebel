@@ -22,6 +22,9 @@ body{
 	position: relative;
 	min-width: 320px;
 }
+body.lock{
+	overflow: hidden;
+}
 
 ul,li{
 	margin: 0;
