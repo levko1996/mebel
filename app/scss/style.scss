@@ -16,7 +16,11 @@
 		overflow-x: hidden;
 		overflow-y: hidden;
 		background-color: $header-top-bg;
-		z-index: 2;
+		z-index: 1;
+	}
+
+	&__top.off {
+		z-index: 3;
 	}
 
 	&__top-inner {
@@ -206,19 +210,6 @@
 		transition-delay: .6s;
 	}
 }
-
-.container {}
-
-.hamburger {
-
-	&__span {}
-}
-
-.one {}
-
-.two {}
-
-.three {}
 
 // end header
 
@@ -473,6 +464,7 @@
 			opacity: 0;
 			transition: all .3s;
 		}
+
 		& .new-items__hidden {
 			opacity: 0;
 			transition: all .3s;
@@ -484,6 +476,7 @@
 			& .sales-leaders__hidden {
 				opacity: 1;
 			}
+
 			& .new-items__hidden {
 				opacity: 1;
 			}
@@ -499,6 +492,10 @@
 			@include f600;
 			padding: 0px 0px 0px 10px;
 			z-index: 100;
+		}
+
+		&.off {
+			z-index: 0;
 		}
 	}
 
@@ -747,33 +744,37 @@
 		width: 100%;
 		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 		padding: 0% 30px;
-		
 
-		&__img img{
+
+		&__img img {
 			max-height: 662px;
 			max-width: 560px;
 			width: 100%;
 			object-fit: fill;
 		}
 
-		&__title{
+		&__title {
 			font-size: 28px;
 			line-height: 1.6;
 			margin: 0px 0px 8px 0px;
 		}
-		&__price{
+
+		&__price {
 			display: flex;
 			justify-content: flex-start;
 			margin: 0px 0px 22px 0px;
-			&--new{
+
+			&--new {
 				@include f600;
 				padding: 0px 25px 0px 0px;
 			}
 		}
-		&__description{
+
+		&__description {
 			margin: 0px 0px 16px 0px;
 		}
-		&__bottom{
+
+		&__bottom {
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
@@ -787,7 +788,7 @@
 	align-items: center;
 	padding: 7px 14px 7px 0;
 	border: none;
-	box-shadow:none;
+	box-shadow: none;
 	transition: all .3s;
 	outline: none;
 
@@ -802,17 +803,19 @@
 		position: relative;
 		margin: 0px 0px 0px 10px;
 		cursor: pointer;
-		&:before{
-			content:'\f08a';
+
+		&:before {
+			content: '\f08a';
 			font-size: 20px;
 			padding: 5px;
 			background-color: $white;
 			border-radius: 50%;
 			transition: all .3s;
 		}
-		&:hover{
-			&:before{
-				content:'\f004';
+
+		&:hover {
+			&:before {
+				content: '\f004';
 				background-color: $peach;
 				color: $text;
 			}
@@ -820,7 +823,7 @@
 	}
 }
 
-.slick-arrow{
+.slick-arrow {
 	border: none;
 	width: 35px;
 	height: 52px;
@@ -832,27 +835,35 @@
 	cursor: pointer;
 	background-color: transparent;
 	outline: none;
+
+	&.off{
+		z-index: 0;
+	}
 }
 
-.slick-prev{
+
+
+.slick-prev {
 	font-size: 0;
 	position: absolute;
 	left: 0;
 	margin: 0px 22px 0px 0px;
-	&:before{
-		content:'\f053';
+
+	&:before {
+		content: '\f053';
 		font-size: 50px;
-		font-family:'icomoon';
+		font-family: 'icomoon';
 	}
 }
 
-.slick-next{
+.slick-next {
 	right: 0;
 	margin: 0px 22px 0px 0px;
-	&:before{
-		content:'\f054';
+
+	&:before {
+		content: '\f054';
 		font-size: 50px;
-		font-family:'icomoon';
+		font-family: 'icomoon';
 	}
 }
 
@@ -878,31 +889,32 @@
 		@include f600;
 		transition: color .3s ease;
 		margin: 0px 0px 40px 0px;
-		&:hover{
+
+		&:hover {
 			color: $hoverText;
 		}
 	}
 
 	&__cards {
 		display: flex;
-		justify-content:space-between;
+		justify-content: space-between;
 		flex-wrap: wrap;
 	}
 
-	
+
 	&__card-inner {
 		display: inline-block;
 		position: relative;
 		overflow: hidden;
 	}
-	
-	&__card img{
+
+	&__card img {
 		min-height: 600px;
 		max-width: 860px;
 		object-fit: cover;
 		transition: all .5s;
 
-		&:hover{
+		&:hover {
 			transform: scale(1.1);
 		}
 	}
@@ -917,7 +929,7 @@
 		background-color: $white;
 		display: flex;
 		flex-direction: column;
-		justify-content:center;
+		justify-content: center;
 		align-items: center;
 		overflow: hidden;
 		transition: all .5s;
@@ -938,7 +950,7 @@
 
 	&__card-info {
 		display: flex;
-		justify-content:space-between;
+		justify-content: space-between;
 		width: 100%;
 	}
 
@@ -953,7 +965,8 @@
 		@include f600;
 		transition: color .3s ease;
 		cursor: pointer;
-		&:hover{
+
+		&:hover {
 			color: $hoverText;
 		}
 	}
@@ -975,7 +988,7 @@
 
 	&__items {
 		display: flex;
-		justify-content:space-between;
+		justify-content: space-between;
 		flex-wrap: wrap;
 		margin: 0 -15px;
 	}
@@ -990,19 +1003,20 @@
 		margin: 0px 0px 24px 0px;
 	}
 
-	&__item-list li{
+	&__item-list li {
 		margin: 16px 0;
 	}
-	&__item-list li a:hover{
-		color: $hoverText; 
+
+	&__item-list li a:hover {
+		color: $hoverText;
 	}
 
-	&__item-list li a img{
+	&__item-list li a img {
 		max-width: 114px;
 		width: 100%;
 	}
 
-	&__item-list li a .icon__paments{
+	&__item-list li a .icon__paments {
 		max-width: 200px;
 		width: 100%;
 	}
@@ -1010,7 +1024,7 @@
 	&__bottom {
 		padding: 110px 0 50px;
 		display: flex;
-		justify-content:space-between;
+		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
 	}
@@ -1027,10 +1041,131 @@
 		transition: color .3s ease;
 		color: $hoverText;
 		cursor: pointer;
-		&:hover{
+
+		&:hover {
 			color: $text;
 		}
 	}
 }
 
 // end footer
+
+// start hamburger
+
+.hamburger {
+	position: relative;
+	z-index: 2;
+	right: 0;
+	top: 2px;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+	float: right;
+	transition: all 0.3s ease-out;
+	transform: translateX(50%);
+
+	&__span {
+		height: 2px;
+		background: $text;
+		transition: all .3s ease-out;
+		backface-visibility: hidden;
+		margin: 2px auto;
+	}
+
+	&.on {
+		top: 5px;
+	}
+
+	&.on #one {
+		transform: rotate(45deg) translateX(4px) translateY(-2px);
+	}
+
+	&.on #two {
+		opacity: 0;
+	}
+
+	&.on #three {
+		transform: rotate(-45deg) translateX(7px) translateY(-2px);
+	}
+}
+
+// end hamburger
+
+// start sidebar
+.menu {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: $white;
+	opacity: 0;
+}
+
+.close-menu {
+	position: fixed;
+	margin: 1em;
+	font-size: 24px;
+	color: $white;
+	z-index: 1;
+}
+
+.nav {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	margin-top: 8%;
+}
+
+.main-menu {
+
+	&__item {
+		padding: 15px 30px;
+		background-color: rgba(237, 235, 233, 0.5);
+		border-bottom: 1px solid $underline;
+
+		& a {
+			color: $text;
+			font-weight: lighter;
+		}
+	}
+}
+
+.sidebar {
+
+	&__title {
+		background-color: $white;
+		@include f600;
+	}
+
+	&__submenu {
+		display: none;
+
+		& a {
+			color: $hoverText;
+		}
+	}
+
+	&__item {
+		margin: 20px 0;
+	}
+}
+
+.sidebar a ion-icon {
+	position: relative;
+	font-size: 10px;
+	opacity: 0.4;
+}
+
+@media(max-width: 768) {
+	h1 {
+		font-size: 20px;
+	}
+
+	.nav {
+		margin-top: 20%;
+	}
+}
+
+// end sidebar
+
+@import '_media';
